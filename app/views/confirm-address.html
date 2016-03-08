@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="/">GOV.UK prototype kit</a></li>
+    </ol>
+  </div>
+
+  <h1 class="heading-large">Check the address is correct</h1>
+
+  <div class="form-group">
+    <div class="address-display">
+      <p>
+        John Smith<br>
+        71 Whitehall Park,<br>
+        London,<br>
+        N19 3TN<br>
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <p><a href="">Edit address</a></p>
+  </div>
+
+  <div class="form-group">
+    <input class="button" type="submit" value="Yes - this address is correct">
+  </div>
+
+</main>
+
+{% endblock %}

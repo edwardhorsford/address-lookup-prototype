@@ -1,0 +1,120 @@
+// Import GOV.UK elements, this will import the frontend toolkit and some base styles.
+// Take a look in _govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+
+// Take a look at patterns.scss to see which files are imported.
+@import 'patterns';
+
+@import 'radios-and-checkboxes';
+
+// If you need to create a page as part of your journey, but without GOV.UK branding
+// See localhost:3000/examples/unbranded/
+.unbranded {
+  background: $white;
+  // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
+  * {
+    font-family: Arial !important;
+  }
+  // Remove GOV.UK footer styles
+  #footer {
+    border: 0;
+    background: $white;
+  }
+}
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+.address-list {
+  // overflow-y: scroll;
+  // max-height: 255px;
+  max-width: 500px;
+  border: 2px solid $grey-1;
+  margin-bottom: 15px; 
+  li {
+    background-color: $highlight-colour;
+    border: 1px solid $grey-1;
+  }
+  a {
+    display:block;
+    padding: 15px;
+
+    &:focus {
+      background-color: $govuk-blue;
+      // background-color: $panel-colour;
+    }
+
+    &:hover {
+      background-color: $panel-colour;
+    }
+    &:active {
+      background-color: default;
+      // background-color: $panel-colour;
+    }
+  }
+  .selected a:hover {
+    background-color: $govuk-blue;
+  }
+  .fake-radio::before{
+    content: "";
+    float: left;
+    background-color: #fff;
+    border: 2px solid $border-colour;
+
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 16px;
+  }
+
+  .selected {
+
+    background-color: $govuk-blue;
+    a {
+      color: white;
+    }
+    
+    &::before {
+      content: "●";
+      line-height: 1;
+      text-align: center;
+      font-size: 31px;
+    }
+  }
+}
+
+.address-display {
+  background-color: $highlight-colour;
+  padding: 15px;
+  border-left: 10px solid $grey-1;
+  & p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#postcode {
+  max-width: 100px;
+  text-transform: uppercase;
+}
+

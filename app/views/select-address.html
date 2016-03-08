@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="/">GOV.UK prototype kit</a></li>
+    </ol>
+  </div>
+
+  <h1 class="heading-large">Select your address</h1>
+
+  <p>If your address isn't listed you can <a href="/manual-address">add it manually</a>.</p>
+
+  <div class="address-list">
+    <ol>
+      <li class="fake-radio">
+        <a href="">
+          64 Whitehall Park,
+          London,
+          N19 3TN
+        </a>
+      </li>
+      <li class="fake-radio">
+        <a href="">
+          65 Whitehall Park,
+          London,
+          N19 3TN
+        </a>
+      </li>
+      <li class="fake-radio">
+        <a href="">
+          67 Whitehall Park,
+          London,
+          N19 3TN
+        </a>
+      </li>
+      <li class="fake-radio">
+        <a href="">
+          68 Whitehall Park,
+          London,
+          N19 3TN
+        </a>
+      </li>
+      <li class="fake-radio">
+        <a href="">
+          69 Whitehall Park,
+          London,
+          N19 3TN
+        </a>
+      </li>
+      <li class="fake-radio">
+        <a href="">
+          71 Whitehall Park,
+          London,
+          N19 3TN
+        </a>
+      </li>
+      <li class="fake-radio">
+        <a href="">
+          72 Whitehall Park,
+          London,
+          N19 3TN
+        </a>
+      </li>
+    </ol>
+  </div>
+
+  <div class="form-group">
+    <a href="/confirm-address" class="button">Continue</a>
+  </div>
+
+</main>
+
+{% endblock %}
