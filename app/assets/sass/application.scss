@@ -2,11 +2,8 @@
 // Take a look in _govuk-elements.scss to see which files are imported.
 @import 'govuk-elements';
 
-
 // Take a look at patterns.scss to see which files are imported.
 @import 'patterns';
-
-@import 'radios-and-checkboxes';
 
 // If you need to create a page as part of your journey, but without GOV.UK branding
 // See localhost:3000/examples/unbranded/
@@ -42,21 +39,25 @@
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
-
 .address-list {
   // overflow-y: scroll;
   // max-height: 255px;
   max-width: 500px;
   border: 2px solid $grey-1;
   margin-bottom: 15px; 
-  li {
+
+  label input {
+    display: none;
+  }
+
+  li, .fake-radio {
     background-color: $highlight-colour;
     border: 1px solid $grey-1;
   }
-  a {
-    display:block;
-    padding: 15px;
+  a, .fake-radio {
+    // text-decoration: underline;
+    display: block;
+    padding: 25px;
 
     &:focus {
       background-color: $govuk-blue;
@@ -65,15 +66,17 @@
 
     &:hover {
       background-color: $panel-colour;
+      cursor: pointer;
     }
     &:active {
       background-color: default;
       // background-color: $panel-colour;
     }
   }
-  .selected a:hover {
-    background-color: $govuk-blue;
+  .fake-radio.active:hover {
+    background-color: $govuk-blue !important;
   }
+
   .fake-radio::before{
     content: "";
     float: left;
@@ -82,20 +85,19 @@
 
     width: 30px;
     height: 30px;
-    margin-left: 10px;
+    // margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: -5px;
     border-radius: 16px;
   }
 
-  .selected {
+  .active {
 
     background-color: $govuk-blue;
-    a {
-      color: white;
-    }
+    color: white;
     
     &::before {
+      color: black;
       content: "●";
       line-height: 1;
       text-align: center;
@@ -117,4 +119,3 @@
   max-width: 100px;
   text-transform: uppercase;
 }
-

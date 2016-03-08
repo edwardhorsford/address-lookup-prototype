@@ -126,11 +126,9 @@ $(document).ready(function() {
 
   $('.fake-radio').click(function(e) {
     e.preventDefault();
-    $('.fake-radio').removeClass('selected');
-    $(this).addClass('selected');
+    $('.fake-radio').removeClass('active');
+    $(this).addClass('active');
 
   });
-
-
 
 });

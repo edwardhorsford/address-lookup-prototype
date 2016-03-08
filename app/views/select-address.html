@@ -18,7 +18,7 @@
 
   <p>If your address isn't listed you can <a href="/manual-address">add it manually</a>.</p>
 
-  <div class="address-list">
+  <!-- <div class="address-list">
     <ol>
       <li class="fake-radio">
         <a href="">
@@ -70,11 +70,46 @@
         </a>
       </li>
     </ol>
-  </div>
+  </div> -->
 
-  <div class="form-group">
-    <a href="/confirm-address" class="button">Continue</a>
-  </div>
+  <form action="/confirm-address" method="post" class="form">
+
+    <div class="form-group">
+      <fieldset>
+        <div class="address-list">
+          <label for="item-1" class="fake-radio">
+            <input type="radio" id="item-1" name="selectedAddress" value="68 Whitehall, London SW1A 2AS">
+            68 Whitehall, London SW1A 2AS
+          </label>
+          <label for="item-2" class="fake-radio">
+            <input type="radio" id="item-2" name="selectedAddress" value="69 Whitehall, London SW1A 2AS">
+            69 Whitehall, London SW1A 2AS
+          </label>
+          <label for="item-3" class="fake-radio">
+            <input type="radio" id="item-3" name="selectedAddress" value="70 Whitehall, London SW1A 2AS">
+            70 Whitehall, London SW1A 2AS
+          </label>
+
+          <label for="item-4" class="fake-radio">
+            <input type="radio" id="item-4" name="selectedAddress" value="71 Whitehall, London SW1A 2AS">
+            71 Whitehall, London SW1A 2AS
+          </label>
+
+          <label for="item-5" class="fake-radio">
+            <input type="radio" id="item-5" name="selectedAddress" value="72 Whitehall, London SW1A 2AS">
+            72 Whitehall, London SW1A 2AS
+          </label>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
 
 </main>
 
