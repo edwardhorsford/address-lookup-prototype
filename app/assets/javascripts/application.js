@@ -125,7 +125,6 @@ $(document).ready(function() {
   toggleContent.showHideCheckboxToggledContent();
 
   $('.fake-radio').click(function(e) {
-    e.preventDefault();
     $('.fake-radio').removeClass('active');
     $(this).addClass('active');
 

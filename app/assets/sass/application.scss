@@ -51,7 +51,7 @@
   }
 
   li, .fake-radio {
-    background-color: $highlight-colour;
+    // background-color: $highlight-colour;
     border: 1px solid $grey-1;
   }
   a, .fake-radio {
@@ -60,12 +60,13 @@
     padding: 25px;
 
     &:focus {
-      background-color: $govuk-blue;
+      // background-color: $govuk-blue;
       // background-color: $panel-colour;
     }
 
     &:hover {
       background-color: $panel-colour;
+      text-decoration: underline;
       cursor: pointer;
     }
     &:active {
@@ -74,7 +75,9 @@
     }
   }
   .fake-radio.active:hover {
-    background-color: $govuk-blue !important;
+    // background-color: $govuk-blue !important;
+    background-color: $panel-colour;
+    // background-color: white;
   }
 
   .fake-radio::before{
@@ -91,15 +94,21 @@
     border-radius: 16px;
   }
 
+  .fake-radio.active::before{
+    // border-color: black;
+  }
+
   .active {
 
-    background-color: $govuk-blue;
-    color: white;
+    // background-color: $govuk-blue;
+    background-color: $highlight-colour;
+    // background-color: white;
+    color: black;
     
     &::before {
       color: black;
       content: "●";
-      line-height: 1;
+      line-height: 0.9;
       text-align: center;
       font-size: 31px;
     }
@@ -108,14 +117,20 @@
 
 .address-display {
   background-color: $highlight-colour;
+  // color: $secondary-text-colour;
   padding: 15px;
-  border-left: 10px solid $grey-1;
+  border: 1px solid $grey-1;
+  // border-left: 10px solid $grey-1;
   & p:last-child {
     margin-bottom: 0;
   }
 }
 
 #postcode {
-  max-width: 100px;
+  max-width: 120px;
   text-transform: uppercase;
+}
+
+#address-street2 {
+  margin-top: 5px;
 }
