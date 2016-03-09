@@ -76,6 +76,17 @@
 
 
     <header role="banner" id="global-header" class="{% block header_class %}{% endblock %}">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="{{ homepage_url|default('https://www.gov.uk') }}" title="{{ logo_link_title|default('Go to the GOV.UK homepage') }}" id="logo" class="content">
+              Company name
+            </a>
+          </div>
+          {% block inside_header %}{% endblock %}
+        </div>
+        {% block proposition_header %}{% endblock %}
+      </div>
     </header>
     <!--end header-->
 

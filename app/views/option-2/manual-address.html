@@ -1,0 +1,52 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <!-- <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="/">GOV.UK prototype kit</a></li>
+    </ol>
+  </div> -->
+
+  <h1 class="heading-large">{% if selectedAddress %}Please correct the address{% else %}Enter your address{% endif %}</h1>
+
+  <form action="address-updated" method="post" class="form">
+
+    <div class="form-group">
+      <label class="form-label" for="deliveryName">Full name</label>
+      <input type="text" class="form-control" id="deliveryName" name="deliveryName" value="{{deliveryName}}">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="address-street">Delivery address</label>
+      <label class="form-label" for="address-street">Building and street</label>
+      <input type="text" class="form-control" id="address-street" value="{{selectedAddress}}{% if selectedAddress %} Whitehall{% endif %}">
+      <input type="text" class="form-control" id="address-street2">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="address-street">Town or city</label>
+      <input type="text" class="form-control" id="address-street" value="{% if selectedAddress %}London{% endif %}">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="postcode">Postcode</label>
+      <input type="text" class="form-control" id="postcode" value="{% if selectedAddress %}SW1A 2AS{% endif %}">
+    </div>
+    
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+
+{% endblock %}

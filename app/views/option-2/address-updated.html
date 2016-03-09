@@ -1,0 +1,35 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <!-- <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="/">GOV.UK prototype kit</a></li>
+    </ol>
+  </div> -->
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Address updated</h1>
+
+      <p>We've notified the <a href="">Open Address Register</a> that your address was {% if selectedAddress %}incorrect{% else %}missing{% endif %}. In the future, you won't have to enter it again manually.</p>
+
+      <div class="form-group">
+        <a href="demo-finished" class="button">Continue to payment</a>
+      </div>
+    </div>
+
+    
+  </div>
+  
+  
+
+</main>
+
+{% endblock %}

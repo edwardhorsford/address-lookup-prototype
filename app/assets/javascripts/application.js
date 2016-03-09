@@ -130,4 +130,11 @@ $(document).ready(function() {
 
   });
 
+  $('.search-button').click(function(e) {
+    e.preventDefault();
+    $('.address-container').removeClass('hidden');
+    
+
+  });
+
 });
