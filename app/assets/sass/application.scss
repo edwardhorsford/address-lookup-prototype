@@ -11,7 +11,8 @@
   background: $white;
   // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
   * {
-    font-family: Helvetica !important;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
   }
   // Remove GOV.UK footer styles
   #footer {
